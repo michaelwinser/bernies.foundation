@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Bernies Foundation — Keeping the Sunglasses Off Your Supply Chain</title>
+  <meta name="description" content="The Bernies Foundation provides ongoing engineering work to prevent unmaintained open source dependencies from creating supply chain risk.">
+  <style>
+    :root {
+      --bg: #fafaf7;
+      --fg: #1a1a1a;
+      --muted: #5b5b5b;
+      --accent: #d97706;
+      --accent-dark: #b45309;
+      --rule: #e5e5e0;
+      --max: 44rem;
+    }
+    * { box-sizing: border-box; }
+    html { font-size: 18px; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--accent-dark); }
+    a:hover { color: var(--accent); }
+
+    header.hero {
+      background: #111;
+      color: #fff;
+      padding: 4rem 1.25rem 3rem;
+      text-align: center;
+    }
+    header.hero img {
+      max-width: 14rem;
+      width: 60%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+      margin-bottom: 1.5rem;
+    }
+    header.hero h1 {
+      font-size: 2.4rem;
+      letter-spacing: -0.02em;
+      margin: 0 0 0.5rem;
+    }
+    header.hero p.tag {
+      font-size: 1.15rem;
+      color: #d4d4d4;
+      max-width: 34rem;
+      margin: 0 auto;
+    }
+    header.hero p.tag .shades { white-space: nowrap; }
+
+    main {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 3rem 1.25rem 4rem;
+    }
+    section { margin-bottom: 3rem; }
+    section:last-child { margin-bottom: 0; }
+    h2 {
+      font-size: 1.5rem;
+      letter-spacing: -0.01em;
+      margin: 0 0 0.75rem;
+    }
+    p { margin: 0 0 1rem; }
+    p.lead {
+      font-size: 1.15rem;
+      color: var(--fg);
+    }
+
+    .callout {
+      border-left: 4px solid var(--accent);
+      background: #fff;
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .callout p { margin: 0; }
+    .callout strong { color: var(--accent-dark); }
+
+    ul.risks, ul.fs {
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0 0;
+    }
+    ul.risks li {
+      padding: 0.9rem 0;
+      border-top: 1px solid var(--rule);
+    }
+    ul.risks li:first-child { border-top: none; }
+    ul.risks li strong { display: block; margin-bottom: 0.15rem; }
+    ul.risks li span { color: var(--muted); }
+
+    ul.fs {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+      gap: 1rem;
+    }
+    ul.fs li {
+      background: #fff;
+      border: 1px solid var(--rule);
+      border-radius: 8px;
+      padding: 1rem;
+    }
+    ul.fs li b {
+      display: block;
+      font-size: 1.1rem;
+      color: var(--accent-dark);
+      margin-bottom: 0.25rem;
+    }
+    ul.fs li span { color: var(--muted); font-size: 0.95rem; }
+
+    .cta {
+      background: #111;
+      color: #fff;
+      border-radius: 12px;
+      padding: 2rem 1.5rem;
+      text-align: center;
+    }
+    .cta h2 { color: #fff; }
+    .cta p { color: #d4d4d4; max-width: 32rem; margin: 0 auto 1.25rem; }
+    .cta a.button {
+      display: inline-block;
+      background: var(--accent);
+      color: #111;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
+    }
+    .cta a.button:hover { background: #f59e0b; }
+
+    footer {
+      border-top: 1px solid var(--rule);
+      padding: 2rem 1.25rem;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    footer a { color: var(--muted); }
+
+    @media (max-width: 600px) {
+      html { font-size: 16px; }
+      header.hero { padding: 3rem 1.25rem 2.5rem; }
+      header.hero h1 { font-size: 1.9rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <img src="bernie.avif" alt="Bernie, propped up and wearing sunglasses">
+    <h1>The Bernies Foundation</h1>
+    <p class="tag">
+      Some of your dependencies are <span class="shades">wearing sunglasses. 🕶️</span><br>
+      We do the engineering work to take them off.
+    </p>
+  </header>
+
+  <main>
+
+    <section>
+      <h2>What's a Bernie?</h2>
+      <p class="lead">
+        A <strong>Bernie</strong> is an open source package that's still being downloaded millions of
+        times a week, still resolving in your lockfile, still passing CI — but nobody is home.
+        The maintainer has moved on. Issues pile up. PRs go unreviewed. The package is, for all
+        practical purposes, dead… it just hasn't stopped moving yet.
+      </p>
+      <p>
+        Like the 1989 movie, the ecosystem keeps propping these packages up and parading them
+        around as if everything is fine. It isn't.
+      </p>
+      <div class="callout">
+        <p>
+          Analysis of the most-depended-upon open source packages found that
+          <strong>roughly 1 in 8 critical repositories is dead</strong> — archived or
+          non-responsive — yet collectively they sit underneath
+          <strong>hundreds of millions of downstream repos</strong>.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Why this is a supply chain problem</h2>
+      <p>
+        Unmaintained code used to be low-risk simply because nobody bothered to look at it.
+        That era is over. Automated and AI-assisted vulnerability discovery means real,
+        exploitable bugs are now being found in code that has no one to fix it.
+      </p>
+      <ul class="risks">
+        <li>
+          <strong>CVEs with nowhere to go</strong>
+          <span>A valid vulnerability is reported, but there's no maintainer to receive it and no fixed version to upgrade to.</span>
+        </li>
+        <li>
+          <strong>Frozen registry namespaces</strong>
+          <span>One absent individual holds publish rights. Even if a patch exists, it never reaches <code>npm install</code> or <code>pip install</code>.</span>
+        </li>
+        <li>
+          <strong>Transitive version pins</strong>
+          <span>A dead package's strict version constraints block <em>your</em> other dependencies from taking security updates.</span>
+        </li>
+        <li>
+          <strong>Silent, unexamined code</strong>
+          <span>Millions of dependents, zero recent eyeballs. The bugs are there — they just haven't been filed yet.</span>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Our mission</h2>
+      <p class="lead">
+        The Bernies Foundation exists to <strong>fund and perform the ongoing engineering work</strong>
+        that keeps unmaintained dependencies from becoming supply chain incidents.
+      </p>
+      <p>
+        Most organizations treat their dependency tree the way bad owners treat a puppy: they
+        loved bringing it home, but nobody wants to walk it. We are the people who show up
+        to do the unglamorous work — triage, patching, coordination with registries, and
+        responsible handoff — so that a dead package doesn't become your breach notification.
+      </p>
+    </section>
+
+    <section>
+      <h2>How we work: Fix, Fork, Forgo</h2>
+      <p>
+        For every Bernie we identify in the critical dependency graph, we apply one of three
+        engineering strategies — and where none of those is enough, we help organize
+        <strong>funding</strong> so a real maintainer can step back in.
+      </p>
+      <ul class="fs">
+        <li>
+          <b>Fix</b>
+          <span>Patch the vulnerability upstream, get it merged, and get a release cut — even if that means doing the release engineering ourselves.</span>
+        </li>
+        <li>
+          <b>Fork</b>
+          <span>When upstream is truly gone, publish a maintained, minimal-diff fork under foundation stewardship and coordinate registry handover.</span>
+        </li>
+        <li>
+          <b>Forgo</b>
+          <span>Help the ecosystem migrate off dependencies that no longer justify their risk, with codemods and clear deprecation paths.</span>
+        </li>
+        <li>
+          <b>Fund</b>
+          <span>Direct resources to maintainers and projects at capacity, so the next Bernie never has to put the sunglasses on.</span>
+        </li>
+      </ul>
+    </section>
+
+    <section class="cta">
+      <h2>Help us take the sunglasses off</h2>
+      <p>
+        If your organization depends on open source — and it does — you depend on Bernies.
+        Sponsor the engineering work, nominate a package that needs help, or lend your own
+        engineers to the effort.
+      </p>
+      <a class="button" href="mailto:hello@bernies.foundation">Get involved</a>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>
+      The Bernies Foundation &middot;
+      Inspired by <a href="https://alpha-omega.dev/blog/weekend-at-bernies-which-of-your-dependencies-are-wearing-sunglasses/">Weekend at Bernie's</a>
+      and the <a href="https://www.linkedin.com/pulse/three-fs-open-source-puppy-care-michael-winser-7vaie/">Three Fs of Open Source Puppy Care</a>.
+    </p>
+    <p>No actual Bernies were harmed in the making of this foundation.</p>
+  </footer>
+
+</body>
+</html>
