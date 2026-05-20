@@ -1,0 +1,21 @@
+index.html
+  s_2f7fbb8bd8d31e::t_f6068ae038fc15 264
+CNAME
+  s_2f7fbb8bd8d31e::t_642cc78ac265d6 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.11",
+  "base_commit_sha": "23b4e2381146558562cc519f076ce4c016a16127",
+  "prompts": {},
+  "sessions": {
+    "s_2f7fbb8bd8d31e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "69fc7a51-a54b-44d6-b75e-b5d6b874ab27",
+        "model": "claude-mythos-preview"
+      },
+      "human_author": "Michael Winser <github.com@public.winser.com>"
+    }
+  }
+}
